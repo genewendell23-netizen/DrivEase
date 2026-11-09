@@ -1,0 +1,25 @@
+DRIVEASE - FINAL FUNCTIONAL CHANGES
+
+This is a patch for your EXISTING working DrivEase-FRESH-READY folder.
+It does NOT include or replace server/.env, database data, Cloudinary credentials, or node_modules.
+
+CHANGES
+1. A submitted booking reserves the vehicle and removes it from renter homepage listings.
+2. If the owner rejects the booking, the vehicle becomes available again. When the owner marks an accepted rental completed, it becomes available again.
+3. Owners can assign Sedan, SUV, MPV, Motorcycle, or Other when adding/editing a vehicle.
+4. Renters can filter by those categories. All shows every available vehicle.
+5. Removed date selection from Car Details. Dates remain on Rental Information before payment.
+
+INSTALL
+1. Stop the frontend and backend terminal processes (Ctrl+C; answer Y if asked).
+2. Extract this ZIP.
+3. Copy the folders src, server, and database from the extracted patch into your existing DrivEase-FRESH-READY project folder. Choose Replace files when Windows asks. DO NOT replace server/.env.
+4. In MySQL Workbench run the full contents of database/migrations/003_vehicle_category.sql.
+5. Start backend: open CMD in the project's server folder and run npm.cmd start.
+6. Start frontend: open another CMD in the project root and run npm.cmd run dev.
+7. Hard refresh the browser with Ctrl+Shift+R.
+
+IMPORTANT
+- Keep your existing .env file. Never upload or share it.
+- This patch does not change existing booking or vehicle records.
+- After a booking is submitted, the vehicle is hidden from the renter catalog immediately. Rejection or completion restores availability.
